@@ -1,4 +1,3 @@
-import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import {
   HeroSection,
   LatestDropSection,
@@ -12,7 +11,6 @@ import {
 export default function Home() {
   return (
     <main className="relative min-h-screen">
-      <WhatsAppCTA />
       <HeroSection />
       <LatestDropSection />
       <ClipsSection />

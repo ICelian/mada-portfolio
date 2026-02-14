@@ -1,6 +1,5 @@
 import { AnimatedSection } from "@/components/animated-section";
 import { BookingForm } from "@/components/booking-form";
-import { CopyButton } from "@/components/copy-button";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Instagram, Youtube } from "lucide-react";
@@ -25,60 +24,41 @@ export function ContactSection() {
           <AnimatedSection delay={0.2}>
             <Card className="h-full border-neon-green/20">
               <CardContent className="flex h-full flex-col justify-between p-8">
-                <div>
-                  <h3 className="mb-6 text-2xl font-bold text-white">
-                    Contacte-moi direct
-                  </h3>
+                  <div>
+                    <h3 className="mb-6 text-2xl font-bold text-white">
+                      Contacte-moi direct
+                    </h3>
 
-                  <div className="space-y-4">
-                    <div className="group">
-                      <p className="mb-2 text-sm font-bold uppercase tracking-wider text-white/60">
-                        WhatsApp (Réponse rapide)
-                      </p>
-                      <div className="flex items-center gap-3">
-                        <Button variant="default" size="lg" asChild>
-                          <a
-                            href="https://wa.me/33612345678?text=Salut%20!%20Je%20veux%20parler%20booking%2Fcollab%20%F0%9F%8E%A4"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1"
-                          >
-                            Ouvrir WhatsApp
-                          </a>
-                        </Button>
-                        <CopyButton text="+33612345678" />
-                      </div>
-                    </div>
-
-                    <div className="space-y-3 pt-6">
-                      <p className="text-sm font-bold uppercase tracking-wider text-white/60">
-                        Réseaux sociaux
-                      </p>
-                      <div className="flex flex-wrap gap-3">
-                        <Button variant="purple" size="sm" asChild>
-                          <a
-                            href="https://instagram.com/YOUR_HANDLE"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Instagram className="h-4 w-4" />
-                            Instagram
-                          </a>
-                        </Button>
-                        <Button variant="purple" size="sm" asChild>
-                          <a
-                            href="https://youtube.com/@YOUR_CHANNEL"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Youtube className="h-4 w-4" />
-                            YouTube
-                          </a>
-                        </Button>
+                    <div className="space-y-4">
+                      <div className="space-y-3">
+                        <p className="text-sm font-bold uppercase tracking-wider text-white/60">
+                          Réseaux sociaux
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                          <Button variant="purple" size="sm" asChild>
+                            <a
+                              href="https://www.instagram.com/mada4bang"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Instagram className="h-4 w-4" />
+                              Instagram
+                            </a>
+                          </Button>
+                          <Button variant="purple" size="sm" asChild>
+                            <a
+                              href="https://www.youtube.com/@mada4bang"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Youtube className="h-4 w-4" />
+                              YouTube
+                            </a>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
               </CardContent>
             </Card>
           </AnimatedSection>

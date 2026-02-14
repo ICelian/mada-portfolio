@@ -18,7 +18,7 @@ export function Footer() {
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="ghost" size="sm" asChild>
               <a
-                href="https://instagram.com/YOUR_HANDLE"
+                href="https://www.instagram.com/mada4bang"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -27,7 +27,7 @@ export function Footer() {
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <a
-                href="https://youtube.com/@YOUR_CHANNEL"
+                href="https://www.youtube.com/@mada4bang"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -36,7 +36,7 @@ export function Footer() {
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <a
-                href="https://open.spotify.com/artist/YOUR_ARTIST_ID"
+                href="https://open.spotify.com/artist/6X3sUrTNuZ8mezY546Mrkx"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -47,7 +47,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-white/40">
-          <p>&copy; 2025 MADA. All rights reserved.</p>
+          <p>&copy; 2026 MADA. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { GlitchText } from "@/components/glitch-text";
 import { SocialLinks } from "@/components/social-links";
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -36,22 +35,7 @@ export function HeroSection() {
           Shatta • Live • Showcase
         </p>
 
-        <p className="mx-auto mb-12 max-w-2xl text-base text-white/80 md:text-lg">
-          Artiste rap et shatta basé en France. Performances live,
-          collaborations, nouveaux sons. Prêt à enflammer la scène.
-        </p>
-
         <div className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button variant="default" size="lg" asChild>
-            <a
-              href="https://wa.me/33612345678?text=Salut%20!%20Je%20veux%20parler%20booking%2Fcollab%20%F0%9F%8E%A4"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Mail className="h-5 w-5" />
-              Booking / Collab
-            </a>
-          </Button>
           <Button variant="neon" size="lg" asChild>
             <a href="#contact">Contact Pro</a>
           </Button>
