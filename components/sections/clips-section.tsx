@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
-import { Card, CardContent } from "@/components/ui/card";
-import { Play } from "lucide-react";
+
+const trackIds = [
+  "4Kg9zNqSS2zvxGuXLhI096",
+  "523dW86UxitB2d8JnMxw8P",
+  "6sYAEJjWimWCcpcNCuqJPe",
+];
 
 export function ClipsSection() {
   return (
@@ -20,40 +24,25 @@ export function ClipsSection() {
         <AnimatedSection>
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black uppercase tracking-tight text-white md:text-6xl">
-              Clips
+              Derniers Sons
             </h2>
             <div className="mx-auto h-1 w-24 bg-gradient-to-r from-neon-purple to-neon-green" />
           </div>
         </AnimatedSection>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3].map((index) => (
-            <AnimatedSection key={index} delay={0.1 * index}>
-              <Card className="group overflow-hidden border-neon-purple/20 transition-all hover:border-neon-purple/50 hover:shadow-[0_0_30px_rgba(138,43,226,0.2)]">
-                <div className="relative aspect-video">
-                  <Image
-                    src="/mada-portrait-neon.webp"
-                    alt={`Clip ${index}`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/50 backdrop-blur-[1px] transition-all group-hover:bg-black/30">
-                    <div className="rounded-full bg-neon-purple/20 p-4 backdrop-blur-sm transition-all group-hover:bg-neon-purple/30 group-hover:scale-110">
-                      <Play className="h-10 w-10 fill-neon-purple text-neon-purple" />
-                    </div>
-                  </div>
-                </div>
-
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-white">
-                    [Titre Clip {index}]
-                  </h3>
-                  <p className="text-sm text-white/60">
-                    [Nombre] vues • Il y a [temps]
-                  </p>
-                </CardContent>
-              </Card>
+        <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {trackIds.map((trackId, index) => (
+            <AnimatedSection key={trackId} delay={0.1 * index}>
+              <div className="overflow-hidden rounded-xl border border-neon-purple/20 bg-black/40 backdrop-blur-sm transition-all hover:border-neon-purple/50 hover:shadow-[0_0_30px_rgba(138,43,226,0.2)]">
+                <iframe
+                  src={`https://open.spotify.com/embed/track/${trackId}?utm_source=generator&theme=0`}
+                  width="100%"
+                  height="152"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="rounded-lg border-0"
+                />
+              </div>
             </AnimatedSection>
           ))}
         </div>
