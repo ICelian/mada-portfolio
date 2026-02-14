@@ -34,7 +34,7 @@ export function ClipsSection() {
         <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3">
           {trackIds.map((trackId, index) => (
             <AnimatedSection key={trackId} delay={0.1 * index}>
-              <SpotifyTrack trackId={trackId} />
+              <SpotifyTrack trackId={trackId} delay={index * 300} />
             </AnimatedSection>
           ))}
         </div>
