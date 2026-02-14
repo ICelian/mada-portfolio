@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
+import { SpotifyTrack } from "@/components/spotify-track";
 
 const trackIds = [
   "4Kg9zNqSS2zvxGuXLhI096",
@@ -33,16 +34,7 @@ export function ClipsSection() {
         <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3">
           {trackIds.map((trackId, index) => (
             <AnimatedSection key={trackId} delay={0.1 * index}>
-              <div className="overflow-hidden rounded-xl border border-neon-purple/20 bg-black/40 backdrop-blur-sm transition-all hover:border-neon-purple/50 hover:shadow-[0_0_30px_rgba(138,43,226,0.2)]">
-                <iframe
-                  src={`https://open.spotify.com/embed/track/${trackId}?utm_source=generator&theme=0`}
-                  width="100%"
-                  height="152"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                  className="rounded-lg border-0"
-                />
-              </div>
+              <SpotifyTrack trackId={trackId} />
             </AnimatedSection>
           ))}
         </div>
