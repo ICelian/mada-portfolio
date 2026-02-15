@@ -11,7 +11,7 @@ import { Loader2, Send } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Nom requis (minimum 2 caractères)"),
-  contact: z.string().min(3, "Email ou Instagram requis"),
+  contact: z.string().min(3, "Email requis"),
   message: z.string().min(10, "Message trop court (minimum 10 caractères)"),
 });
 
@@ -37,8 +37,17 @@ export function BookingForm() {
     setSubmitStatus("idle");
 
     try {
-      console.log("Form data:", data);
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'envoi");
+      }
 
       setSubmitStatus("success");
       reset();
