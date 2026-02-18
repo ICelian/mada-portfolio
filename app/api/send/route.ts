@@ -1,6 +1,7 @@
 import { EmailTemplate } from '@/components/email-template';
 import { Resend } from 'resend';
 import { NextRequest } from 'next/server';
+import { createElement } from 'react';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -20,7 +21,7 @@ export async function POST(request: NextRequest) {
       from: 'Mada4Bang Collab <onboarding@resend.dev>',
       to: ['mada4bangpro@gmail.com'],
       subject: `Nouveau message de ${name}`,
-      react: EmailTemplate({ name, contact, message }),
+      react: createElement(EmailTemplate, { name, contact, message }),
       replyTo: contact.includes('@') ? contact : undefined,
     });
 
