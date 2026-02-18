@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'Mada4Bang Collab <onboarding@resend.dev>',
+      from: process.env.RESEND_FROM || 'Mada4Bang Collab <onboarding@resend.dev>',
       to: ['mada4bangpro@gmail.com'],
       subject: `Nouveau message de ${name}`,
       react: createElement(EmailTemplate, { name, contact, message }),
