@@ -123,7 +123,7 @@ export function BookingForm() {
       )}
       {submitStatus === "error" && (
         <p className="text-center text-sm text-red-400">
-          Erreur lors de l&apos;envoi. Réessaye ou contacte-moi sur WhatsApp.
+          Erreur lors de l&apos;envoi. Réessaye ou contacte-moi sur Instagram.
         </p>
       )}
     </form>
