@@ -12,7 +12,7 @@ const buttonVariants = cva(
           "bg-neon-green text-black hover:bg-neon-green/90 hover:shadow-[0_0_20px_rgba(0,255,159,0.5)]",
         neon: "border-2 border-neon-green text-neon-green bg-transparent hover:bg-neon-green/10 hover:shadow-[0_0_20px_rgba(0,255,159,0.3)]",
         purple:
-          "border-2 border-neon-purple text-neon-purple bg-transparent hover:bg-neon-purple/10 hover:shadow-[0_0_20px_rgba(138,43,226,0.3)]",
+          "border-2 border-neon-purple text-neon-purple bg-black/40 md:bg-transparent hover:bg-neon-purple/10 hover:shadow-[0_0_20px_rgba(138,43,226,0.3)]",
         ghost: "hover:bg-white/5 text-white",
       },
       size: {

@@ -10,34 +10,43 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "MADA - Rappeur | Shatta • Live • Showcase",
+  title: "Mada4Bang - Artiste Shatta | Booking & Showcase",
   description:
-    "MADA - Artiste rap, shatta, live performances. Booking, collaborations, nouveaux sons. Découvre l'univers MADA.",
+    "Mada4Bang - Artiste shatta, booking, showcase, collaborations, contact officiel. Découvre l'univers Mada4Bang.",
   keywords: [
-    "MADA",
-    "rap",
+    "Mada4Bang",
     "shatta",
-    "rappeur",
     "artiste",
     "booking",
-    "live",
     "showcase",
     "collaboration",
     "musique urbaine",
+    "contact",
   ],
-  authors: [{ name: "MADA" }],
+  authors: [{ name: "Mada4Bang" }],
   openGraph: {
-    title: "MADA - Rappeur | Shatta • Live • Showcase",
+    title: "Mada4Bang - Artiste Shatta | Booking & Showcase",
     description:
-      "Artiste rap, shatta, live performances. Booking et collaborations.",
+      "Artiste shatta, booking, showcase, collaborations, contact officiel",
     type: "website",
+    siteName: "Mada4Bang",
     locale: "fr_FR",
+    url: "https://mada4bang.com",
+    images: [
+      {
+        url: "https://mada4bang.com/mada-portrait-neon.webp",
+        width: 1200,
+        height: 630,
+        alt: "Mada4Bang",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MADA - Rappeur | Shatta • Live • Showcase",
+    title: "Mada4Bang - Artiste Shatta | Booking & Showcase",
     description:
-      "Artiste rap, shatta, live performances. Booking et collaborations.",
+      "Artiste shatta, booking, showcase, collaborations, contact officiel",
+    images: ["https://mada4bang.com/mada-portrait-neon.webp"],
   },
   robots: {
     index: true,
