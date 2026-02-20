@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error('Resend error:', JSON.stringify(error));
       return Response.json({ error }, { status: 500 });
     }
 
@@ -34,7 +34,10 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('API error:', error);
     return Response.json(
-      { error: 'Erreur lors de l\'envoi du message' },
+      { 
+        error: 'Erreur lors de l\'envoi du message',
+        details: error instanceof Error ? error.message : String(error)
+      },
       { status: 500 }
     );
   }
