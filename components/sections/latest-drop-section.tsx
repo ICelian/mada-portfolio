@@ -20,7 +20,7 @@ export function LatestDropSection() {
           <Card className="mx-auto max-w-3xl overflow-hidden border-neon-green/20">
             <div className="relative aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/hHoA2Cz0fwk"
+                src="https://www.youtube.com/embed/j7Pv7OSNhTU"
                 title="MADA - Latest Track"
                 className="absolute inset-0 h-full w-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -30,7 +30,7 @@ export function LatestDropSection() {
 
             <CardContent className="p-8">
               <h3 className="mb-2 text-2xl font-bold text-white">
-                Mada4Bang - La Recette
+                Montpel Carnival Anthem 2
               </h3>
               <div className="flex flex-wrap gap-3">
                 <Button variant="neon" size="sm" asChild>
