@@ -73,66 +73,93 @@ const socialMedia = [
   },
 ];
 
+const allLinks = [...musicPlatforms, ...socialMedia];
+
 export function SocialLinks() {
   return (
     <div className="space-y-8">
-      <div>
-        <h3 className="mb-4 text-center text-sm font-bold uppercase tracking-wider text-white/60">
-          Écoute mes sons
-        </h3>
-        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
-          {musicPlatforms.map((link) => {
-            const Icon = link.icon;
-            return (
-              <Button
-                key={link.name}
-                variant="purple"
-                size="lg"
-                asChild
-                className="w-full sm:w-auto"
+      <div className="flex flex-wrap justify-center gap-2 md:hidden">
+        {allLinks.map((link) => {
+          const Icon = link.icon;
+          return (
+            <Button
+              key={link.name}
+              variant="ghost"
+              size="icon"
+              asChild
+              className="h-11 w-11"
+            >
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.name}
               >
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2"
-                >
-                  <Icon className="h-5 w-5" />
-                  <span>{link.name}</span>
-                </a>
-              </Button>
-            );
-          })}
-        </div>
+                <Icon className="h-5 w-5" />
+              </a>
+            </Button>
+          );
+        })}
       </div>
 
-      <div>
-        <h3 className="mb-4 text-center text-sm font-bold uppercase tracking-wider text-white/60">
-          Suis-moi
-        </h3>
-        <div className="flex flex-wrap justify-center gap-3">
-          {socialMedia.map((link) => {
-            const Icon = link.icon;
-            return (
-              <Button
-                key={link.name}
-                variant="neon"
-                size="lg"
-                asChild
-                className="w-full sm:w-auto"
-              >
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2"
+      <div className="hidden md:block">
+        <div>
+          <h3 className="mb-4 text-center text-sm font-bold uppercase tracking-wider text-white/60">
+            Écoute mes sons
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {musicPlatforms.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Button
+                  key={link.name}
+                  variant="purple"
+                  size="lg"
+                  asChild
+                  className="w-full sm:w-auto"
                 >
-                  <Icon className="h-5 w-5" />
-                  <span>{link.name}</span>
-                </a>
-              </Button>
-            );
-          })}
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <Icon className="h-5 w-5" />
+                    <span>{link.name}</span>
+                  </a>
+                </Button>
+              );
+            })}
+          </div>
+        </div>
+        <div className="mt-8">
+          <h3 className="mb-4 text-center text-sm font-bold uppercase tracking-wider text-white/60">
+            Suis-moi
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {socialMedia.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Button
+                  key={link.name}
+                  variant="neon"
+                  size="lg"
+                  asChild
+                  className="w-full sm:w-auto"
+                >
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <Icon className="h-5 w-5" />
+                    <span>{link.name}</span>
+                  </a>
+                </Button>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
