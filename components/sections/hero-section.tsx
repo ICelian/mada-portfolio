@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { GlitchText } from "@/components/glitch-text";
+import { ScrollIndicator } from "@/components/scroll-indicator";
 import { SocialLinks } from "@/components/social-links";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[90svh] items-center justify-center overflow-hidden grain-overlay md:min-h-screen">
+    <section className="relative flex h-[100dvh] min-h-[100dvh] items-center justify-center overflow-hidden grain-overlay md:min-h-screen md:h-auto">
       <div className="absolute inset-0 z-0">
         <Image
           src="/mada-hero-showcase.webp"
@@ -19,7 +20,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-16 text-center md:px-6 md:py-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-4 py-8 text-center md:px-6 md:py-20">
         <div className="mb-6 inline-block rounded-full border border-neon-green/40 bg-black/60 px-3 py-1.5 backdrop-blur-md md:mb-6 md:px-5 md:py-2.5">
           <span className="text-[10px] font-bold uppercase tracking-widest text-neon-green md:text-sm">
             Disponible pour booking
@@ -45,7 +46,8 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/80 to-transparent" />
+      <ScrollIndicator />
     </section>
   );
 }

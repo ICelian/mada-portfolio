@@ -23,7 +23,7 @@ const platformLinks = [
 
 export function LatestDropSection() {
   return (
-    <section className="relative bg-black py-16 md:py-32">
+    <section id="latest-drop" className="relative bg-black py-16 md:py-32">
       <div className="mx-auto max-w-7xl px-4 md:px-4">
         <AnimatedSection>
           <div className="mb-10 flex flex-col items-center text-center md:mb-16">
