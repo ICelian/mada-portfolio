@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { GlitchText } from "@/components/glitch-text";
-import { ScrollIndicator } from "@/components/scroll-indicator";
-import { SocialLinks } from "@/components/social-links";
+import { ScrollIndicator, SocialLinks } from "@/components/social-links";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {

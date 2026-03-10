@@ -1,11 +1,31 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Music2,
-  Music,
-  Disc3,
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { ChevronDown, Disc3, Music, Music2 } from "lucide-react";
+
+export function ScrollIndicator() {
+  return (
+    <motion.a
+      href="#latest-drop"
+      aria-label="Voir la suite"
+      className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-1.5 rounded-full text-white/80 transition-colors hover:text-neon-green focus:outline-none focus:ring-2 focus:ring-neon-green/50 focus:ring-offset-2 focus:ring-offset-transparent"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: [0.7, 1, 0.7] }}
+      transition={{ delay: 1.2, duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+    >
+      <span className="text-[10px] font-bold uppercase tracking-[0.35em] md:text-xs">
+        Dernier clip
+      </span>
+      <motion.span
+        animate={{ y: [0, 6, 0] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <ChevronDown className="h-5 w-5 md:h-6 md:w-6" strokeWidth={2.5} />
+      </motion.span>
+    </motion.a>
+  );
+}
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg
