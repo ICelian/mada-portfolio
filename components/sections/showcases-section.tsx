@@ -5,27 +5,6 @@ import { Calendar, MapPin } from "lucide-react";
 
 const shows = [
   {
-    date: "2026-02-19",
-    eventName: "Carnaval de Montpellier",
-    city: "Montpellier",
-    venue: "",
-    ticketUrl: "",
-  },
-  {
-    date: "2026-02-20",
-    eventName: "Carnaval de Montpellier",
-    city: "Montpellier",
-    venue: "",
-    ticketUrl: "",
-  },
-  {
-    date: "2026-02-21",
-    eventName: "Carnaval de Montpellier",
-    city: "Montpellier",
-    venue: "",
-    ticketUrl: "",
-  },
-  {
     date: "2026-04-24",
     eventName: "305 Vice Club",
     city: "Nice",
@@ -63,7 +42,7 @@ export function ShowcasesSection() {
         <AnimatedSection>
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black uppercase tracking-tight text-white md:text-6xl">
-              Showcases
+              Prochain Showcase
             </h2>
             <div className="mx-auto h-1 w-24 bg-gradient-to-r from-neon-green to-neon-purple" />
           </div>
