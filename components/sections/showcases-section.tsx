@@ -25,6 +25,13 @@ const shows = [
     venue: "",
     ticketUrl: "",
   },
+  {
+    date: "2026-04-24",
+    eventName: "305 Vice Club",
+    city: "Nice",
+    venue: "305 Vice Club",
+    ticketUrl: "",
+  },
 ];
 
 function formatDate(dateString: string) {
