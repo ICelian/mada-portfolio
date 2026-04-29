@@ -6,9 +6,9 @@ import { Calendar, MapPin } from "lucide-react";
 const shows = [
   {
     date: "2026-04-30",
-    eventName: "BobAr",
+    eventName: "BÔBAR",
     city: "La Garde",
-    venue: "BobAr",
+    venue: "BÔBAR",
     ticketUrl: "",
   },
   {
