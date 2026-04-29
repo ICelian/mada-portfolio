@@ -5,10 +5,24 @@ import { Calendar, MapPin } from "lucide-react";
 
 const shows = [
   {
-    date: "2026-04-24",
-    eventName: "305 Vice Club",
-    city: "Nice",
-    venue: "305 Vice Club",
+    date: "2026-04-30",
+    eventName: "BobAr",
+    city: "La Garde",
+    venue: "BobAr",
+    ticketUrl: "",
+  },
+  {
+    date: "2026-05-01",
+    eventName: "Vieux Rocher",
+    city: "Cannes",
+    venue: "Vieux Rocher",
+    ticketUrl: "",
+  },
+  {
+    date: "2026-05-07",
+    eventName: "Mescla",
+    city: "Aix-en-Provence",
+    venue: "Mescla",
     ticketUrl: "",
   },
 ];
